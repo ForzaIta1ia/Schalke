@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#004D9D">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
+<title>Schalke News</title>
+<style>
+  :root { --blue:#004D9D; --bg:#f2f5fa; --card:#fff; --txt:#12203a; --mut:#66738a; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#16213a; --txt:#e8eefc; --mut:#8fa0c0; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:16px/1.4 system-ui,sans-serif; }
+  header { position:sticky; top:0; z-index:5; background:var(--blue); color:#fff;
+    padding:calc(env(safe-area-inset-top) + 10px) 16px 10px; display:flex; align-items:center; gap:10px; }
+  header h1 { font-size:20px; margin:0; flex:1; }
+  header small { opacity:.8; display:block; font-size:12px; font-weight:400; }
+  button { border:0; background:rgba(255,255,255,.18); color:#fff; border-radius:10px; padding:8px 12px; font-size:15px; }
+  main { padding:12px 16px 40px; max-width:720px; margin:auto; }
+  .card { background:var(--card); border-radius:14px; padding:14px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  .card.new { border-left:4px solid var(--blue); }
+  .card h2 { font-size:17px; margin:0 0 6px; }
+  .card h2 a { color:inherit; text-decoration:none; }
+  .meta { color:var(--mut); font-size:13px; }
+  .sum { margin:6px 0 0; color:var(--mut); font-size:14px; }
+  details { margin-top:8px; font-size:14px; }
+  summary { color:var(--blue); cursor:pointer; }
+  details a { display:block; color:var(--txt); padding:4px 0; }
+  .badge { display:inline-block; background:var(--blue); color:#fff; border-radius:8px; padding:0 7px; font-size:12px; margin-right:6px; }
+  .empty { text-align:center; color:var(--mut); padding:40px 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔵⚪ Schalke News<small id="upd">lädt…</small></h1>
+  <button id="reload" aria-label="Aktualisieren">↻</button>
+</header>
+<main id="list"><div class="empty">Lade News…</div></main>
+<script src="app.js"></script>
+</body>
+</html>

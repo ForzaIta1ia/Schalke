@@ -1,0 +1,9 @@
+{
+  "name": "Schalke News",
+  "short_name": "S04 News",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#004D9D",
+  "theme_color": "#004D9D",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
